@@ -38,7 +38,7 @@ class ObrasProyectosController < ApplicationController
   def update
     respond_to do |format|
       if @obras_proyecto.update(obras_proyecto_params)
-        format.html { redirect_to @obras_proyecto, notice: "La obra o proyecto ha sido editado con exito." }
+        format.html { redirect_to @obras_proyecto, notice: "La obra o proyecto ha sido actualizado con exito." }
         format.json { render :show, status: :ok, location: @obras_proyecto }
       else
         format.html { render :edit, status: :unprocessable_entity }

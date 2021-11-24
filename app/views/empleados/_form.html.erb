@@ -1,0 +1,72 @@
+<%= form_with(model: empleado) do |form| %>
+  <% if empleado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(empleado.errors.count, "error") %> prohibited this empleado from being saved:</h2>
+
+      <ul>
+        <% empleado.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellidoPaterno %>
+    <%= form.text_field :apellidoPaterno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellidoMaterno %>
+    <%= form.text_field :apellidoMaterno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaNacimiento %>
+    <%= form.date_select :fechaNacimiento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nss %>
+    <%= form.text_field :nss %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.text_field :categoria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activo %>
+    <%= form.text_field :activo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaCreacion %>
+    <%= form.date_select :fechaCreacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fehcaActualizacion %>
+    <%= form.date_select :fehcaActualizacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
