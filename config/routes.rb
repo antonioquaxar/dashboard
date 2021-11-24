@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :empleados
   resources :herramienta_maquinaria
   resources :obras_proyectos
   devise_for :users
