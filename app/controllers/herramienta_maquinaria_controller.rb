@@ -25,7 +25,7 @@ class HerramientaMaquinariaController < ApplicationController
 
     respond_to do |format|
       if @herramienta_maquinarium.save
-        format.html { redirect_to @herramienta_maquinarium, notice: "Herramienta maquinarium was successfully created." }
+        format.html { redirect_to @herramienta_maquinarium, notice: "La herramienta o maquinaria ha sido creado con exito." }
         format.json { render :show, status: :created, location: @herramienta_maquinarium }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class HerramientaMaquinariaController < ApplicationController
   def update
     respond_to do |format|
       if @herramienta_maquinarium.update(herramienta_maquinarium_params)
-        format.html { redirect_to @herramienta_maquinarium, notice: "Herramienta maquinarium was successfully updated." }
+        format.html { redirect_to @herramienta_maquinarium, notice: "La herramienta o maquinaria ha sido actualizado con exito." }
         format.json { render :show, status: :ok, location: @herramienta_maquinarium }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +51,7 @@ class HerramientaMaquinariaController < ApplicationController
   def destroy
     @herramienta_maquinarium.destroy
     respond_to do |format|
-      format.html { redirect_to herramienta_maquinaria_url, notice: "Herramienta maquinarium was successfully destroyed." }
+      format.html { redirect_to herramienta_maquinaria_url, notice: "La herramienta o maquinaria ha sido eliminado con exito." }
       format.json { head :no_content }
     end
   end

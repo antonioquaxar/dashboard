@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  apellidoPaterno: MyString
+  apellidoMaterno: MyString
+  fechaNacimiento: 2021-11-24
+  telefono: MyString
+  email: MyString
+  nss: MyString
+  categoria: MyString
+  activo: MyString
+  fechaCreacion: 2021-11-24
+  fehcaActualizacion: 2021-11-24
+
+two:
+  nombre: MyString
+  apellidoPaterno: MyString
+  apellidoMaterno: MyString
+  fechaNacimiento: 2021-11-24
+  telefono: MyString
+  email: MyString
+  nss: MyString
+  categoria: MyString
+  activo: MyString
+  fechaCreacion: 2021-11-24
+  fehcaActualizacion: 2021-11-24

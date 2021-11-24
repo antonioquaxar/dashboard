@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_161153) do
+ActiveRecord::Schema.define(version: 2021_11_24_194931) do
+
+  create_table "empleados", force: :cascade do |t|
+    t.string "nombre"
+    t.string "apellidoPaterno"
+    t.string "apellidoMaterno"
+    t.date "fechaNacimiento"
+    t.string "telefono"
+    t.string "email"
+    t.string "nss"
+    t.string "categoria"
+    t.string "activo"
+    t.date "fechaCreacion"
+    t.date "fehcaActualizacion"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "herramienta_maquinaria", force: :cascade do |t|
     t.string "nombre"
