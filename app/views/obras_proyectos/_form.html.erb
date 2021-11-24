@@ -1,0 +1,67 @@
+<%= form_with(model: obras_proyecto) do |form| %>
+  <% if obras_proyecto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(obras_proyecto.errors.count, "error") %> prohibited this obras_proyecto from being saved:</h2>
+
+      <ul>
+        <% obras_proyecto.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ubicacion %>
+    <%= form.text_field :ubicacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TipoObra %>
+    <%= form.text_field :TipoObra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MontoObra %>
+    <%= form.number_field :MontoObra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaInicio %>
+    <%= form.date_select :fechaInicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaFin %>
+    <%= form.date_select :fechaFin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :responsable %>
+    <%= form.text_field :responsable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaCreacion %>
+    <%= form.date_select :fechaCreacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaActualizacion %>
+    <%= form.date_select :fechaActualizacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

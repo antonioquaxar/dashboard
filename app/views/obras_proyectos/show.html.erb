@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @obras_proyecto.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @obras_proyecto.descripcion %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @obras_proyecto.ubicacion %>
+</p>
+
+<p>
+  <strong>Tipoobra:</strong>
+  <%= @obras_proyecto.TipoObra %>
+</p>
+
+<p>
+  <strong>Montoobra:</strong>
+  <%= @obras_proyecto.MontoObra %>
+</p>
+
+<p>
+  <strong>Fechainicio:</strong>
+  <%= @obras_proyecto.fechaInicio %>
+</p>
+
+<p>
+  <strong>Fechafin:</strong>
+  <%= @obras_proyecto.fechaFin %>
+</p>
+
+<p>
+  <strong>Responsable:</strong>
+  <%= @obras_proyecto.responsable %>
+</p>
+
+<p>
+  <strong>Fechacreacion:</strong>
+  <%= @obras_proyecto.fechaCreacion %>
+</p>
+
+<p>
+  <strong>Fechaactualizacion:</strong>
+  <%= @obras_proyecto.fechaActualizacion %>
+</p>
+
+<%= link_to 'Editar', edit_obras_proyecto_path(@obras_proyecto) %> |
+<%= link_to 'Regresar', obras_proyectos_path %>

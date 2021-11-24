@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Herramienta Maquinaria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Modelo</th>
+      <th>Marca</th>
+      <th>Fechaadquisicion</th>
+      <th>Cantidadalmacen</th>
+      <th>Fechacreacion</th>
+      <th>Fechaactualizacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @herramienta_maquinaria.each do |herramienta_maquinarium| %>
+      <tr>
+        <td><%= herramienta_maquinarium.nombre %></td>
+        <td><%= herramienta_maquinarium.modelo %></td>
+        <td><%= herramienta_maquinarium.marca %></td>
+        <td><%= herramienta_maquinarium.fechaAdquisicion %></td>
+        <td><%= herramienta_maquinarium.cantidadAlmacen %></td>
+        <td><%= herramienta_maquinarium.fechaCreacion %></td>
+        <td><%= herramienta_maquinarium.fechaActualizacion %></td>
+        <td><%= link_to 'Ver', herramienta_maquinarium %></td>
+        <td><%= link_to 'Editar', edit_herramienta_maquinarium_path(herramienta_maquinarium) %></td>
+        <td><%= link_to 'Eliminar', herramienta_maquinarium, method: :delete, data: { confirm: 'Estas seguro de eliminar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Herramienta o Maquinaria', new_herramienta_maquinarium_path %>

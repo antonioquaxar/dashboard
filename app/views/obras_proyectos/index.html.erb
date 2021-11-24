@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Obras/Proyectos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Ubicacion</th>
+      <th>Tipo de obra</th>
+      <th>Monto de obra</th>
+      <th>Fecha de inicio</th>
+      <th>Fecha de fin</th>
+      <th>Responsable</th>
+      <th>Fecha de creacion</th>
+      <th>Fecha de actualizacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @obras_proyectos.each do |obras_proyecto| %>
+      <tr>
+        <td><%= obras_proyecto.nombre %></td>
+        <td><%= obras_proyecto.descripcion %></td>
+        <td><%= obras_proyecto.ubicacion %></td>
+        <td><%= obras_proyecto.TipoObra %></td>
+        <td><%= obras_proyecto.MontoObra %></td>
+        <td><%= obras_proyecto.fechaInicio %></td>
+        <td><%= obras_proyecto.fechaFin %></td>
+        <td><%= obras_proyecto.responsable %></td>
+        <td><%= obras_proyecto.fechaCreacion %></td>
+        <td><%= obras_proyecto.fechaActualizacion %></td>
+        <td><%= link_to 'Ver', obras_proyecto %></td>
+        <td><%= link_to 'Editar', edit_obras_proyecto_path(obras_proyecto) %></td>
+        <td><%= link_to 'Eliminar', obras_proyecto, method: :delete, data: { confirm: 'estas seguro de eliminar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Obra o Proyecto', new_obras_proyecto_path %>

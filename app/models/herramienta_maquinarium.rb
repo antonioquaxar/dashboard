@@ -1,0 +1,2 @@
+class HerramientaMaquinarium < ApplicationRecord
+end

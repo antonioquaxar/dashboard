@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @herramienta_maquinarium.nombre %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @herramienta_maquinarium.modelo %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @herramienta_maquinarium.marca %>
+</p>
+
+<p>
+  <strong>Fechaadquisicion:</strong>
+  <%= @herramienta_maquinarium.fechaAdquisicion %>
+</p>
+
+<p>
+  <strong>Cantidadalmacen:</strong>
+  <%= @herramienta_maquinarium.cantidadAlmacen %>
+</p>
+
+<p>
+  <strong>Fechacreacion:</strong>
+  <%= @herramienta_maquinarium.fechaCreacion %>
+</p>
+
+<p>
+  <strong>Fechaactualizacion:</strong>
+  <%= @herramienta_maquinarium.fechaActualizacion %>
+</p>
+
+<%= link_to 'Editar', edit_herramienta_maquinarium_path(@herramienta_maquinarium) %> |
+<%= link_to 'Regresar', herramienta_maquinaria_path %>

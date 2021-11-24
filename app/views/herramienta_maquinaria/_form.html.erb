@@ -1,0 +1,52 @@
+<%= form_with(model: herramienta_maquinarium) do |form| %>
+  <% if herramienta_maquinarium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(herramienta_maquinarium.errors.count, "error") %> prohibited this herramienta_maquinarium from being saved:</h2>
+
+      <ul>
+        <% herramienta_maquinarium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modelo %>
+    <%= form.text_field :modelo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marca %>
+    <%= form.text_field :marca %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaAdquisicion %>
+    <%= form.date_select :fechaAdquisicion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cantidadAlmacen %>
+    <%= form.number_field :cantidadAlmacen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaCreacion %>
+    <%= form.date_select :fechaCreacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaActualizacion %>
+    <%= form.date_select :fechaActualizacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
