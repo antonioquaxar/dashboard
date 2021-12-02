@@ -1,4 +1,7 @@
 class ObrasProyectosController < ApplicationController
+
+  before_action :authenticate_user!
+
   before_action :set_obras_proyecto, only: %i[ show edit update destroy ]
 
   # GET /obras_proyectos or /obras_proyectos.json

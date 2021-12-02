@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Proveedores</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Compañia</th>
+      <th>Telefono</th>
+      <th>Nombre de contacto</th>
+      <th>Tipo de proveedor</th>
+      <th>Fecha de creacion</th>
+      <th>Fecha de actualizacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proveedores.each do |proveedore| %>
+      <tr>
+        <td><%= proveedore.id %></td>
+        <td><%= proveedore.compañia %></td>
+        <td><%= proveedore.telefono %></td>
+        <td><%= proveedore.nombreContacto %></td>
+        <td><%= proveedore.tipoProveedor %></td>
+        <td><%= proveedore.fechaCreacion %></td>
+        <td><%= proveedore.fechaActualizacion %></td>
+        <td><%= link_to 'Ver', proveedore %></td>
+        <td><%= link_to 'Editar', edit_proveedore_path(proveedore) %></td>
+        <td><%= link_to 'Eliminar', proveedore, method: :delete, data: { confirm: 'Esta seguro de eliminar' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo proveedor', new_proveedore_path %>

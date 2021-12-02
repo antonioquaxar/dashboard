@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_194931) do
+ActiveRecord::Schema.define(version: 2021_11_25_022259) do
 
   create_table "empleados", force: :cascade do |t|
     t.string "nombre"
@@ -55,6 +55,17 @@ ActiveRecord::Schema.define(version: 2021_11_24_194931) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "proveedores", force: :cascade do |t|
+    t.string "compañia"
+    t.string "telefono"
+    t.string "nombreContacto"
+    t.string "tipoProveedor"
+    t.date "fechaCreacion"
+    t.date "fechaActualizacion"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -65,6 +76,17 @@ ActiveRecord::Schema.define(version: 2021_11_24_194931) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.string "nombre"
+    t.string "email"
+    t.string "password"
+    t.string "tipoUsuario"
+    t.date "fechaCreacion"
+    t.date "fechaActualizacion"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

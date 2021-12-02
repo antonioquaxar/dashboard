@@ -1,4 +1,7 @@
 class HerramientaMaquinariaController < ApplicationController
+
+  before_action :authenticate_user!
+
   before_action :set_herramienta_maquinarium, only: %i[ show edit update destroy ]
 
   # GET /herramienta_maquinaria or /herramienta_maquinaria.json
