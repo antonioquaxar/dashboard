@@ -5,7 +5,6 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Id</th>
       <th>Nombre</th>
       <th>Descripcion</th>
       <th>Ubicacion</th>
@@ -23,7 +22,6 @@
   <tbody>
     <% @obras_proyectos.each do |obras_proyecto| %>
       <tr>
-        <td><%= obras_proyecto.id%></td>
         <td><%= obras_proyecto.nombre %></td>
         <td><%= obras_proyecto.descripcion %></td>
         <td><%= obras_proyecto.ubicacion %></td>
