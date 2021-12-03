@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  compañia: MyString
+  telefono: MyString
+  nombreContacto: MyString
+  tipoProveedor: MyString
+  fechaCreacion: 2021-11-24
+  fechaActualizacion: 2021-11-24
+
+two:
+  compañia: MyString
+  telefono: MyString
+  nombreContacto: MyString
+  tipoProveedor: MyString
+  fechaCreacion: 2021-11-24
+  fechaActualizacion: 2021-11-24

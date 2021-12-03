@@ -1,0 +1,16 @@
+<h1> Empresa industrial </h1>
+    <div style="position:absolute;bottom:590px;right:50px;margin:0;padding:5px 3px;" href="#">
+        <%= link_to "Cerrar sesion", destroy_user_session_path, method: 'delete', class: "btn btn-danger" %>
+    </div>
+    <h3>Bienvenidos</h3>
+<br> 
+    <div class="m-0 row justify-content-center">
+        <nav class="btn-group" role="group" aria-label="Basic example ">
+            <%= link_to "Inicio", root_path, class: "btn btn-success" %>
+            <%= link_to "Usuarios", users_path, class: "btn btn-success" %>
+            <%= link_to "Proveedores", proveedores_path, class: "btn btn-success" %>
+            <%= link_to "Empleados", empleados_path, class: "btn btn-success" %>
+            <%= link_to "Obras/Proyectos", obras_proyectos_path, class: "btn btn-success" %>
+            <%= link_to "Herramienta/Maquinaria", herramienta_maquinaria_path, class: "btn btn-success" %>
+        </nav> 
+    </div>
