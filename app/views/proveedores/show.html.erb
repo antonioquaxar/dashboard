@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @proveedore.id%>
+</p>
+
+<p>
   <strong>Compañia:</strong>
   <%= @proveedore.compañia %>
 </p>
@@ -22,12 +27,12 @@
 
 <p>
   <strong>Fechacreacion:</strong>
-  <%= @proveedore.fechaCreacion %>
+  <%= @proveedore.created_at %>
 </p>
 
 <p>
   <strong>Fechaactualizacion:</strong>
-  <%= @proveedore.fechaActualizacion %>
+  <%= @proveedore.updated_at %>
 </p>
 
 <%= link_to 'Editar', edit_proveedore_path(@proveedore) %> |

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @obras_proyecto.id%>
+</p>
+
+<p>
   <strong>Nombre:</strong>
   <%= @obras_proyecto.nombre %>
 </p>
@@ -42,12 +47,12 @@
 
 <p>
   <strong>Fechacreacion:</strong>
-  <%= @obras_proyecto.fechaCreacion %>
+  <%= @obras_proyecto.created_at %>
 </p>
 
 <p>
   <strong>Fechaactualizacion:</strong>
-  <%= @obras_proyecto.fechaActualizacion %>
+  <%= @obras_proyecto.created_at %>
 </p>
 
 <%= link_to 'Editar', edit_obras_proyecto_path(@obras_proyecto) %> |
