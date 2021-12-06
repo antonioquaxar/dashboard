@@ -24,8 +24,8 @@
         <td><%= proveedore.telefono %></td>
         <td><%= proveedore.nombreContacto %></td>
         <td><%= proveedore.tipoProveedor %></td>
-        <td><%= proveedore.fechaCreacion %></td>
-        <td><%= proveedore.fechaActualizacion %></td>
+        <td><%= proveedore.created_at %></td>
+        <td><%= proveedore.updated_at %></td>
         <td><%= link_to 'Ver', proveedore %></td>
         <td><%= link_to 'Editar', edit_proveedore_path(proveedore) %></td>
         <td><%= link_to 'Eliminar', proveedore, method: :delete, data: { confirm: 'Esta seguro de eliminar' } %></td>

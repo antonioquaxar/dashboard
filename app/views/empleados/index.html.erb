@@ -35,7 +35,7 @@
           <td><%= empleado.categoria %></td>
           <td><%= empleado.activo %></td>
           <td><%= empleado.created_at %></td>
-          <td><%= empleado.fehcaActualizacion %></td>
+          <td><%= empleado.updated_at %></td>
           <td><%= link_to 'Ver', empleado %></td>
           <td><%= link_to 'Editar', edit_empleado_path(empleado) %></td>
           <td><%= link_to 'Eliminar', empleado, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>
