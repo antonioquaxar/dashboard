@@ -1,2 +1,5 @@
 class ObrasProyecto < ApplicationRecord
+
+
+
 end

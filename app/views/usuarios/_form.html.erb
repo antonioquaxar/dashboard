@@ -1,0 +1,47 @@
+<%= form_with(model: usuario) do |form| %>
+  <% if usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(usuario.errors.count, "error") %> Prohibido que este usuario sea guardado:</h2>
+
+      <ul>
+        <% usuario.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipoUsuario %>
+    <%= form.text_field :tipoUsuario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaCreacion %>
+    <%= form.date_select :fechaCreacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaActualizacion %>
+    <%= form.date_select :fechaActualizacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,16 +1,152 @@
-<h1> Empresa industrial </h1>
-    <div style="position:absolute;bottom:590px;right:50px;margin:0;padding:5px 3px;" href="#">
-        <button type="button" class="btn btn-danger"> Cerrar cesion </button>
+<h3> Dahsboard </h3>
+
+<!--pre-->
+    <%# @empleados.each do |us|  %>
+        <%#= us.slice(:id, :created_at, :email) %>
+    <%# end  %>
+   
+    <%#= @mess %>
+    <%#= @cantidad %>
+   
+    <%#= @meses %>
+    <%#= @cantidades %>
+    <!--br-->
+    <%#= User.find(7).created_at %>
+<!--br/-->
+<%#= User.find(3).created_at.in_time_zone(-6) %>
+
+<!--/pre-->
+<%#= Date.today %>
+
+<%#= DateTime.now %>
+
+<%#= Time.now %>
+
+<%#= Time.zone.now %>
+
+
+<div class="row">
+
+    <div class="col-6">
+        <canvas id="myChart"></canvas>
     </div>
-    <h3>Bienvenidos</h3>
-<br> 
-    <a class="m-0 row justify-content-center">
-        <nav class="btn-group" role="group" aria-label="Basic example ">
-            <button type="button" class="btn btn-success"> Inicio </button>
-            <button type="button" class="btn btn-success"> Usuario </button>
-            <button type="button" class="btn btn-success"> Proveedores </button>
-            <button type="button" class="btn btn-success"> Empleados </button>
-            <button type="button" class="btn btn-success"> Obras/Proyectos </button>
-            <button type="button" class="btn btn-success"> Herramienta/maquinaria </button>
-        </nav> 
-    </a>
+
+    <!-- div class="col-sm-8 col-lg-4"></div--> 
+    <div class="col-6"> 
+       <canvas id="migrafica"></canvas> 
+    </div>
+        
+</div>
+
+<script>
+    // console.log("inicio");
+    ctx = document.getElementById('myChart').getContext('2d');
+    // document.addEventListener("turbolinks:load", () => {
+        // console.log("ctx:",ctx);
+        myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: <%= raw @meses.to_json %>,
+                datasets: [{
+                    label: 'usuarios por mes',
+                    data: <%= @cantidades %>,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // console.log("termino");
+    // });
+ 
+</script>
+
+<script>
+    // console.log("inicio");
+    miCanvas = document.getElementById('migrafica').getContext('2d');
+        charts = new Chart(miCanvas, {
+            type: 'bar',
+            data: {
+                labels: <%= raw @mess %>,
+                datasets: [{
+                    label: 'empleados por mes',
+                    data: <%= @cantidad %>,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // console.log("termino");
+    // });
+ 
+</script>
+
+
+<!--filtro en ruby-->

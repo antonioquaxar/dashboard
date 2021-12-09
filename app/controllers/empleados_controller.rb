@@ -1,5 +1,8 @@
 class EmpleadosController < ApplicationController
-  before_action :set_empleado, only: %i[ show edit update destroy ]
+
+  before_action :authenticate_user!
+
+  before_action :set_empleado, only: [ :show, :edit, :update, :destroy ]
 
   # GET /empleados or /empleados.json
   def index
@@ -25,7 +28,7 @@ class EmpleadosController < ApplicationController
 
     respond_to do |format|
       if @empleado.save
-        format.html { redirect_to @empleado, notice: "Empleado was successfully created." }
+        format.html { redirect_to @empleado, notice: "Empleado ha sido creado con exito." }
         format.json { render :show, status: :created, location: @empleado }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +41,7 @@ class EmpleadosController < ApplicationController
   def update
     respond_to do |format|
       if @empleado.update(empleado_params)
-        format.html { redirect_to @empleado, notice: "Empleado was successfully updated." }
+        format.html { redirect_to @empleado, notice: "Empleado ha sido actualizado con exito." }
         format.json { render :show, status: :ok, location: @empleado }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +54,7 @@ class EmpleadosController < ApplicationController
   def destroy
     @empleado.destroy
     respond_to do |format|
-      format.html { redirect_to empleados_url, notice: "Empleado was successfully destroyed." }
+      format.html { redirect_to empleados_url, notice: "Empleado ha sido eliminado con exito." }
       format.json { head :no_content }
     end
   end

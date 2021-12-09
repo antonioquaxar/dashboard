@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @herramienta_maquinarium.id%>
+</p>
+
+<p>
   <strong>Nombre:</strong>
   <%= @herramienta_maquinarium.nombre %>
 </p>
@@ -27,12 +32,12 @@
 
 <p>
   <strong>Fechacreacion:</strong>
-  <%= @herramienta_maquinarium.fechaCreacion %>
+  <%= @herramienta_maquinarium.created_at %>
 </p>
 
 <p>
   <strong>Fechaactualizacion:</strong>
-  <%= @herramienta_maquinarium.fechaActualizacion %>
+  <%= @herramienta_maquinarium.updated_at %>
 </p>
 
 <%= link_to 'Editar', edit_herramienta_maquinarium_path(@herramienta_maquinarium) %> |

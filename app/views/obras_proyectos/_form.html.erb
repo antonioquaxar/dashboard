@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :TipoObra %>
-    <%= form.text_field :TipoObra %>
+    <%= form.label :Tipobra %>
+    <%= form.select :TipoObra, ["civil","electrica","mecanica"] %>
   </div>
 
   <div class="field">
@@ -49,16 +49,6 @@
   <div class="field">
     <%= form.label :responsable %>
     <%= form.text_field :responsable %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fechaCreacion %>
-    <%= form.date_select :fechaCreacion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fechaActualizacion %>
-    <%= form.date_select :fechaActualizacion %>
   </div>
 
   <div class="actions">

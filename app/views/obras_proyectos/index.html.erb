@@ -2,7 +2,7 @@
 
 <h1>Obras/Proyectos</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -30,8 +30,8 @@
         <td><%= obras_proyecto.fechaInicio %></td>
         <td><%= obras_proyecto.fechaFin %></td>
         <td><%= obras_proyecto.responsable %></td>
-        <td><%= obras_proyecto.fechaCreacion %></td>
-        <td><%= obras_proyecto.fechaActualizacion %></td>
+        <td><%= obras_proyecto.created_at %></td>
+        <td><%= obras_proyecto.updated_at %></td>
         <td><%= link_to 'Ver', obras_proyecto %></td>
         <td><%= link_to 'Editar', edit_obras_proyecto_path(obras_proyecto) %></td>
         <td><%= link_to 'Eliminar', obras_proyecto, method: :delete, data: { confirm: 'estas seguro de eliminar?' } %></td>
